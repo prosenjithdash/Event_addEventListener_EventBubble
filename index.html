@@ -7,12 +7,113 @@
 </head>
 <body>
     <h2>Today we are learn Event.</h2>
+
+<!-- 25-1 What Is Event, Different Types Of Event In Web -->
+
     <button onclick="console.log(7)">Click Me</button>
 
     <button onclick="console.log('Prosenjith clicked')">Click Me again</button>
-    <!-- <button onclick="console.log("Bappu clicked")">Click Me again</button> its false problem is same place same "" did not use multiple time. -->
+    <!-- 
+        <button onclick="console.log("Bappu clicked")">Click Me again</button> its false problem is same place same "" did not use multiple time. 
+    -->
 
+<!-- 25-1 What Is Event, Different Types Of Event In Web -->
+
+<!-- ############################################################# -->
+
+<!-- 25-2 Add Onclick Handler Directly Or Via Javascript -->
+
+    <!-- Option: 01 -->
+    <button onclick="document.body.style.background='red'">Meke Red</button>
+    <script src="JS/event.js"></script>
+
+    <!-- Option: 02 -->
+    <!-- we will use that -->
+
+    <button onclick="makeYellow()">Meke Yellow</button>
+
+    <!-- Option: 3 -->
+    
+    <button id="make_blue">Meke Blue</button>
+
+<!-- 25-2 Add Onclick Handler Directly Or Via Javascript -->
+        
+<!-- ############################################################# -->
+
+<!-- 25-3 Different Ways To Use AddEventListener On A Button -->
+
+<!-- option : 4 -->
+
+    <button id="make_pink">Make Pink</button>
+
+<!-- option : 4 final -->
+     <!-- we will use that -->
+
+
+<button id="make_orange">Make Orange</button>
+
+<!-- 25-3 Different Ways To Use AddEventListener On A Button -->
+
+<!-- ############################################################# -->
+
+<!-- 25-4 Most Common Ways To Set Event Handlers -->
+
+
+
+
+<!-- 25-4 Most Common Ways To Set Event Handlers -->
+
+<!-- ############################################################# -->
+
+
+ <!-- Javascript File -->
 
     <script src="JS/event.js"></script>
+
+    <script>
+
+
+        // option: 02
+        // we will use that
+
+        function makeYellow() {
+            document.body.style.background = 'yellow';
+        }
+
+
+        // <!-- Option: 3 -->
+        //Make blue with id
+
+            const makeBlueButton = document.getElementById('make_blue');
+            makeBlueButton.onclick = makeBlue;
+
+            function makeBlue(){
+                document.body.style.backgroundColor = 'blue';
+            }
+
+        // < !--option : 4 -- >
+
+        const pinkButton = document.getElementById('make_pink')
+        // console.log(pinkButton)
+        pinkButton.addEventListener('click', makePink)
+
+        function makePink(){
+            document.body.style.backgroundColor = 'pink';
+        }
+
+        // Option 4 final
+        // we will use that
+
+        document.getElementById('make_orange').addEventListener('click', function makeOrange() { document.body.style.backgroundColor = 'orange';})
+        // function makeOrange(){
+        //     document.body.style.backgroundColor = 'orange';
+        // }
+    </script>
+
+
+
+
+
+
 </body>
 </html>
