@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Dom JS Summary</title>
+</head>
+
+<body>
+
+    <h1>Final DOM Event Handler</h1>
+
+
+    <!-- Option: 01 -->
+    <h3 id="chgName">Hello Pappu</h3>
+    <button onclick="helpMe()">Handle Event by Onclick Function</button>
+
+    <!-- Option: 02 -->
+    <h3 id="chgName2">Hello Bappu</h3>
+    <button id="eventListener">Handle Event by addEventListener</button>
+
+    <!-- Option: 03 -->
+    <br>
+    <h3 id="default">Default Input</h3>
+    
+    <input id="inputFiled" type="text">
+    <button id="button-update">Update</button>
+    <br>
+    <!-- Javascript File -->
+    <script src="JS/event-Summary.js"></script>
+
+    <script>
+
+        // Option: 01
+
+        function helpMe(){
+            // console.log('Call me.')
+            const Name = document.getElementById('chgName');
+            Name.innerText = 'Prosenjith Dash Pappu call him.';
+
+        }
+
+        // Option: 02
+
+        document.getElementById('eventListener').addEventListener('click',function event(){const eventL = document.getElementById('chgName2');
+        eventL.innerText = 'HELP WITH Event Listener.';
+
+        //Option: 03
+
+        document.getElementById('button-update').addEventListener('click', function(){
+            const InputFiled = document.getElementById('inputFiled');
+            const inputText = InputFiled.value;
+            // console.log(inputText)
+            const defaultChange = document.getElementById('default');
+            defaultChange.innerText = inputText;
+
+            InputFiled.value = '';
+        } )
+
+
+    })
+
+
+    </script>
+</body>
+</html>
