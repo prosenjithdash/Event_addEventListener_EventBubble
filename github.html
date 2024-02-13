@@ -1,3 +1,5 @@
+<!-- 25-6 Simple Github Like Delete Confirmation Button -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +8,37 @@
     <title>Delete</title>
 </head>
 <body>
-    <h1>My secret Information</h1>
-    <input type="text">
-    <button id="btn-delete">Delete</button>
+    <h1 id="secret">My secret Information</h1>
+    <input id="delete-confirm" type="text" placeholder="Please type delete">
+    <button id="btn-delete" disabled>Delete</button>
 
     <script>
-        document.getElementById('btn-delete').
+
+        document.getElementById('delete-confirm').addEventListener('keyup',function(event){
+            const text = event.target.value;
+            // console.log(text);
+            // use condition for button disable
+            const deleteButton = document.getElementById('btn-delete');
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled')
+               
+            }
+            else{
+                deleteButton.setAttribute('disabled',true);
+            }
+
+            
+        })
+
+        // set button disabled
+        document.getElementById('btn-delete').addEventListener('click',function(){
+          const  hidden = document.getElementById('secret');
+          hidden.style.display = 'none';
+
+          // hidden delete input field
+           const inputF = document.getElementById('delete-confirm');
+            inputF.value = '';
+        })
     </script>
 </body>
 </html>
