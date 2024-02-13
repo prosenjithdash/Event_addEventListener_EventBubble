@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Event</title>
+</head>
+<body>
+    <h2>More Events</h2>
+    <button id="btn-event">Events</button>
+
+    <input id="text-filed" type="text">
+
+    <!-- Javascript File -->
+    <script>
+
+        // Mouse Click
+        document.getElementById('btn-event').addEventListener('click', function(){console.log('Event triger.')})
+
+        // Mouse Enter
+        // document.getElementById('btn-event').addEventListener('mouseenter', function () { console.log('Event triger.') })
+
+        // Mouse Move
+        // document.getElementById('btn-event').addEventListener('mousemove', function () { console.log('Event triger.') })
+
+        // Focus
+        // document.getElementById('text-filed').addEventListener('focus', function(){console.log('Event triger with focus.')})
+
+        // Blur
+        // document.getElementById('text-filed').addEventListener('blur', function () { console.log('Event triger with blur.') })
+
+        // KeyUp
+        // document.getElementById('text-filed').addEventListener('keyup', function (event) { console.log( event.target.value,'Event triger with keyup.') })
+
+        // // Keydown
+        // document.getElementById('text-filed').addEventListener('keydown', function (event) { console.log(event.target.value, 'Event triger with keyup.') })
+
+        // Keypress
+        document.getElementById('text-filed').addEventListener('keypress', function (event) { console.log( event.target.value,'Event triger with keyup.') })
+
+
+
+
+    </script>
+</body>
+</html>
